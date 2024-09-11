@@ -6,7 +6,14 @@ import (
 
 func GetRegisteredModelMocks() []openapi.RegisteredModel {
 	model1 := openapi.RegisteredModel{
-		CustomProperties:         newCustomProperties(),
+		CustomProperties: &map[string]openapi.MetadataValue{
+			"onnx": {
+				MetadataStringValue: &openapi.MetadataStringValue{
+					StringValue:  "",
+					MetadataType: "MetadataStringValue",
+				},
+			},
+		},
 		Name:                     "Model One",
 		Description:              stringToPointer("This model does things and stuff"),
 		ExternalId:               stringToPointer("934589798"),
@@ -18,7 +25,32 @@ func GetRegisteredModelMocks() []openapi.RegisteredModel {
 	}
 
 	model2 := openapi.RegisteredModel{
-		CustomProperties:         newCustomProperties(),
+		CustomProperties: &map[string]openapi.MetadataValue{
+			"tensorflow": {
+				MetadataStringValue: &openapi.MetadataStringValue{
+					StringValue:  "",
+					MetadataType: "MetadataStringValue",
+				},
+			},
+			"pytorch": {
+				MetadataStringValue: &openapi.MetadataStringValue{
+					StringValue:  "",
+					MetadataType: "MetadataStringValue",
+				},
+			},
+			"mll": {
+				MetadataStringValue: &openapi.MetadataStringValue{
+					StringValue:  "",
+					MetadataType: "MetadataStringValue",
+				},
+			},
+			"rnn": {
+				MetadataStringValue: &openapi.MetadataStringValue{
+					StringValue:  "",
+					MetadataType: "MetadataStringValue",
+				},
+			},
+		},
 		Name:                     "Model Two",
 		Description:              stringToPointer("This model does things and stuff"),
 		ExternalId:               stringToPointer("345235987"),
@@ -30,7 +62,14 @@ func GetRegisteredModelMocks() []openapi.RegisteredModel {
 	}
 
 	model3 := openapi.RegisteredModel{
-		CustomProperties:         newCustomProperties(),
+		CustomProperties: &map[string]openapi.MetadataValue{
+			"llm": {
+				MetadataStringValue: &openapi.MetadataStringValue{
+					StringValue:  "",
+					MetadataType: "MetadataStringValue",
+				},
+			},
+		},
 		Name:                     "Model Three",
 		Description:              stringToPointer("This model does things and stuff"),
 		ExternalId:               stringToPointer("345235989"),
