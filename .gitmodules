@@ -1,0 +1,3 @@
+[submodule "clients/ui/frontend/frontend-sdk"]
+	path = clients/ui/frontend/frontend-sdk
+	url = https://github.com/Griffin-Sullivan/frontend-sdk
